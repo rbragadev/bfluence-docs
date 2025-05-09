@@ -14,14 +14,16 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          Integração com a API Bfluence
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          Sincronize influenciadores, rastreie vendas com cupons e envie transações comissionadas.
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/integracao/introducao">
+            Comece pela Introdução →
           </Link>
         </div>
       </div>
@@ -33,8 +35,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title="API Bfluence"
+      description="Integração para comunidades, marketplaces e plataformas que desejam ativar influenciadores com rastreamento de cupons e comissões.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

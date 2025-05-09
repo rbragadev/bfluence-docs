@@ -4,7 +4,7 @@ title: Responsabilidades
 sidebar_position: 4
 ---
 
-# 📌 Responsabilidades na Integração
+### Responsabilidades na Integração
 
 A seguir estão definidas as **responsabilidades técnicas e operacionais** da Bfluence e da Comunidade parceira no processo de integração.
 
@@ -12,7 +12,7 @@ A seguir estão definidas as **responsabilidades técnicas e operacionais** da B
 
 ---
 
-## 🎯 Responsabilidades da Bfluence
+### Responsabilidades da Bfluence
 
 | Tarefa                                               | Descrição                                                                 |
 |------------------------------------------------------|---------------------------------------------------------------------------|
@@ -25,7 +25,7 @@ A seguir estão definidas as **responsabilidades técnicas e operacionais** da B
 
 ---
 
-## 🤝 Responsabilidades da Comunidade Parceira
+### Responsabilidades da Comunidade Parceira
 
 | Tarefa                                               | Descrição                                                                 |
 |------------------------------------------------------|---------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ A seguir estão definidas as **responsabilidades técnicas e operacionais** da B
 
 ---
 
-## ⚖️ Resumo Comparativo
+### Resumo Comparativo
 
 | Responsável     | Bfluence ✅ | Comunidade ✅ |
 |------------------|-------------|----------------|

@@ -11,36 +11,34 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Integração Simples e Rápida',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        A API da Bfluence foi desenhada para ser integrada em poucos dias, com endpoints claros e payloads consistentes. Ideal para plataformas de e-commerce, edtechs e apps de fidelidade.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Foco na Performance',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Você cuida da experiência do seu usuário — nós cuidamos da estrutura. A Bfluence processa transações via fila, garantindo resiliência e escalabilidade mesmo em alto volume.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Documentação que Trabalha por Você',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Navegue por fluxos claros, exemplos práticos e modelos de dados com descrição de ponta a ponta. Com suporte a Markdown, Mermaid e React, você acessa tudo de forma intuitiva.
       </>
     ),
   },
 ];
+
 
 function Feature({title, Svg, description}: FeatureItem) {
   return (

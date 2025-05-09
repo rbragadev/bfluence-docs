@@ -4,13 +4,13 @@ title: POST /community_transaction
 sidebar_position: 2
 ---
 
-# 💸 Endpoint: `POST /communities/hub/client/{client_id}/community_transaction`
+### Endpoint: `POST /communities/hub/client/{client_id}/community_transaction`
 
 Este endpoint permite que a comunidade envie transações comissionadas **já calculadas** para a Bfluence, de forma segura e assíncrona.
 
 ---
 
-## 📌 Finalidade
+### Finalidade
 
 Registrar na Bfluence:
 
@@ -23,7 +23,7 @@ Registrar na Bfluence:
 
 ---
 
-## 🌐 Endpoint
+### Endpoint
 
 ```http
 POST /communities/hub/client/{client_id}/community_transaction
@@ -33,17 +33,15 @@ POST /communities/hub/client/{client_id}/community_transaction
 
 ---
 
-## 🔐 Headers obrigatórios
+### Headers obrigatórios
 
 | Header           | Tipo   | Obrigatório | Descrição                                           |
 |------------------|--------|-------------|------------------------------------------------------|
 | `Authorization`  | string | Sim         | Token JWT no formato Bearer                         |
-| `client_id`      | string | Sim         | Identificador da comunidade fornecido pela Bfluence |
-| `client_secret`  | string | Sim         | Chave secreta da comunidade para autenticação       |
 
 ---
 
-## 📥 Corpo da requisição (JSON)
+### Corpo da requisição (JSON)
 
 ```json
 {
@@ -73,7 +71,7 @@ POST /communities/hub/client/{client_id}/community_transaction
 
 ---
 
-## ✅ Resposta esperada
+### Resposta esperada
 
 ```json
 {
@@ -84,7 +82,7 @@ POST /communities/hub/client/{client_id}/community_transaction
 
 ---
 
-## ⚠️ Validações realizadas pela Bfluence
+### Validações realizadas pela Bfluence
 
 - Campos obrigatórios presentes e com tipos corretos
 - Formato das datas `ISODate` válido
@@ -94,11 +92,22 @@ POST /communities/hub/client/{client_id}/community_transaction
 
 ---
 
-## 📎 Observações
+### Observações
 
 - O envio pode ser feito de forma assíncrona ou em lotes individuais.
 - Campos incorretos serão ignorados ou retornarão erro 400.
 
 ---
 
-> Veja também o modelo completo da [estrutura da transação](../modelos/transacao.md)
+### Sobre o processamento assíncrono
+
+> O envio da transação ocorre via **mensageria (fila)**, o que significa que:
+>
+> - A API da Bfluence **confirma apenas o recebimento** da transação via HTTP (`200 OK`)
+> - O processamento interno (validação, persistência) ocorre **posteriormente**, em segundo plano
+> - O parceiro não precisa aguardar a conclusão do processamento para seguir o fluxo
+> - É recomendado implementar **retries**, monitoramento e logs locais
+
+Esse modelo garante escalabilidade, isolamento de falhas e robustez no tráfego de grandes volumes de transações.
+
+---

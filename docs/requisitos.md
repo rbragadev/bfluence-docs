@@ -4,27 +4,25 @@ title: Requisitos Técnicos
 sidebar_position: 5
 ---
 
-# ⚙️ Requisitos Técnicos da Integração
+### Requisitos Técnicos da Integração
 
 Este documento resume todos os pré-requisitos técnicos, regras de formato e critérios mínimos necessários para a integração correta entre a sua comunidade e a Bfluence.
 
 ---
 
-## 🔐 Autenticação
+### Autenticação
 
 - Baseada em **JWT (Bearer Token)** com assinatura HMAC (HS256)
-- Tokens fornecidos exclusivamente pela Bfluence
+- Tokens obtidos atraves de client_id e client_secret fornecidos pela equipe Bfluence
 - Headers obrigatórios em todas as requisições:
 
 ```http
 Authorization: Bearer <token_jwt>
-client_id: <seu_id>
-client_secret: <sua_chave>
 ```
 
 ---
 
-## 📦 Formato de Payload
+### Formato de Payload
 
 | Recurso     | Formato padrão | Alternativas disponíveis |
 |-------------|----------------|---------------------------|
@@ -33,7 +31,7 @@ client_secret: <sua_chave>
 
 ---
 
-## 🧱 Estrutura REST
+### Estrutura REST
 
 - Todos os endpoints seguem o padrão RESTful
 - Versionamento via rota: `/api/v1/`
@@ -41,7 +39,7 @@ client_secret: <sua_chave>
 
 ---
 
-## 🔒 Segurança
+### Segurança
 
 - Todos os acessos devem ser realizados via **HTTPS**
 - Tokens JWT devem ser protegidos em ambiente seguro
@@ -49,7 +47,7 @@ client_secret: <sua_chave>
 
 ---
 
-## 🔄 Compatibilidade
+### Compatibilidade
 
 | Ambiente              | Suporte |
 |------------------------|---------|
@@ -59,7 +57,7 @@ client_secret: <sua_chave>
 
 ---
 
-## ⏱ SLA e Suporte
+### SLA e Suporte
 
 | Etapa                              | Tempo estimado      |
 |------------------------------------|----------------------|
@@ -71,7 +69,7 @@ client_secret: <sua_chave>
 
 ---
 
-## 📎 Observações Finais
+### Observações Finais
 
 - Testes em sandbox são recomendados antes de qualquer envio real de transações
 - O time da Bfluence está disponível para suporte técnico durante todo o processo de integração

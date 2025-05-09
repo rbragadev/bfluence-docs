@@ -92,4 +92,3 @@ O token JWT segue o padrão assinado com **HMAC (HS256)** e inclui:
 
 ---
 
-> Para entender como esse token é usado no fluxo de integração, acesse: [Fluxo de Integração](./fluxo.md)

@@ -36,6 +36,6 @@ sequenceDiagram
 ### Requisitos
 
 - Token JWT válido no header
-- Payload no formato JSON conforme [modelo de transação](../modelos/transacao.md)
+- Payload no formato JSON conforme
 
 > As transações são processadas de forma assíncrona. Recomenda-se controle de retries ou filas locais no parceiro.

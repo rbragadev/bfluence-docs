@@ -58,9 +58,8 @@ Após validação, o mesmo fluxo pode ser replicado em produção com apenas a t
 Este manual está dividido em tópicos práticos:
 
 - [Autenticação](./autenticacao.md)
-- [Fluxo da Integração](./fluxo.md)
+- [Fluxo da Integração](./fluxo-bflus.md)
 - [Endpoints e Payloads](../endpoints/get-bflus.md)
-- [Modelos de Dados](../modelos/bflu.md)
 - [Requisitos Técnicos](../requisitos.md)
 
 ---

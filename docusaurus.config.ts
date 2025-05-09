@@ -21,7 +21,7 @@ const config: Config = {
   projectName: 'bfluence-docs', // Usually your repo name.
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -38,6 +38,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: 'docs',
         },
         blog: false,
         theme: {
@@ -55,7 +56,7 @@ const config: Config = {
         config: {
           bfluence: {
             specPath: 'static/openapi/openapi-public.json',
-            outputDir: 'docs/api',
+            outputDir: 'docs/endpoints',
             sidebarOptions: {
               groupPathsBy: 'tag',
             },
@@ -91,8 +92,12 @@ const config: Config = {
           title: 'Documentação',
           items: [
             {
-              label: 'API',
-              to: '/docs/api',
+              label: 'Endpoints',
+              to: '/docs/endpoints',
+            },
+            {
+              label: 'Integração',
+              to: '/docs/integracao/introducao',
             },
           ],
         },

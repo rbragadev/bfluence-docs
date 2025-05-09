@@ -1,0 +1,93 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Bfluence API Pública",
+      "version": "1.0.0",
+      "description": "API pública para integração com comunidades"
+    },
+    "paths": {
+      "/communities/hub/client/{client_id}/get-bflus": {
+        "get": {
+          "tags": ["BFLUs"],
+          "summary": "Obter lista de BFLUs",
+          "parameters": [
+            {
+              "name": "client_id",
+              "in": "path",
+              "required": true,
+              "schema": { "type": "string" }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Lista de BFLUs",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": { "$ref": "#/components/schemas/Bflu" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/communities/hub/client/{client_id}/community_transaction": {
+        "post": {
+          "tags": ["Transações"],
+          "summary": "Enviar transação comissionada",
+          "parameters": [
+            {
+              "name": "client_id",
+              "in": "path",
+              "required": true,
+              "schema": { "type": "string" }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Transaction" }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Transação registrada"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Bflu": {
+          "type": "object",
+          "properties": {
+            "community_bflu_id": { "type": "string" },
+            "community_bflu_cpf": { "type": "string" },
+            "community_bflu_coupon": { "type": "string" },
+            "community_client_bflu_status": { "type": "string" },
+            "community_client_response_status": { "type": "string" },
+            "community_client_rejection_reason": { "type": "string" },
+            "update_date": { "type": "string", "format": "date-time" }
+          }
+        },
+        "Transaction": {
+          "type": "object",
+          "properties": {
+            "community_bflu_id": { "type": "string" },
+            "description": { "type": "string" },
+            "total_amount": { "type": "number" },
+            "sold_value": { "type": "number" },
+            "coupon_name": { "type": "string" },
+            "date_created": { "type": "string", "format": "date-time" },
+            "date_updated": { "type": "string", "format": "date-time" }
+          }
+        }
+      }
+    }
+  }
+  
